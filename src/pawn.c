@@ -25,16 +25,16 @@
 #include "option.h"
 #include "texeltune.h"
 
-CONST score_t supported_pawn     = S(  9, 12);
-CONST score_t backward_pawn[4]   = { S(  2,  0), S( -6,-10), S( -7, -5), S( -7, -5), };
-CONST score_t isolated_pawn[4]   = { S( -2,  1), S( -4, -8), S( -6, -3), S( -9, -5), };
-CONST score_t doubled_pawn[4]    = { S(-10,-55), S(  5,-33), S(  5,-20), S( -3,-12), };
-CONST score_t connected_pawn[7]  = { S(  0,  0), S(  2,  2), S(  4,  4), S(  4,  4), S(  8,  9), S( 31, 34), S( 70, 87), };
-CONST score_t passed_pawn[7]     = { S(  0,  0), S( 53, 31), S( 36, 36), S(-34, 73), S(-41,114), S(175,152), S(432,282), };
-CONST score_t passed_blocked[7]  = { S(  0,  0), S(  1, -1), S(  1,  3), S(  2,-14), S(  0,-17), S(  3,-35), S(-68,-93), };
-CONST score_t passed_file[4]     = { S( -1, 11), S(-20,  7), S(-22, -5), S(-16,-20), };
-CONST score_t distance_us[7]     = { S(  0,  0), S( -2, -3), S(  4, -9), S( 18,-18), S( 16,-23), S(-13,-20), S(-37,-20), };
-CONST score_t distance_them[7]   = { S(  0,  0), S( -8, -2), S(-11,  2), S(-10, 13), S( -5, 25), S(-12, 41), S(  3, 42), };
+CONST score_t supported_pawn     = S( 12, 14);
+CONST score_t backward_pawn[4]   = { S(  0,  3), S(-12,-11), S( -8, -4), S( -6, -2), };
+CONST score_t isolated_pawn[4]   = { S( -8,  0), S( -5, -9), S(  0, -5), S(-11, -7), };
+CONST score_t doubled_pawn[4]    = { S(-17,-36), S( 21,-23), S( -1, -9), S(-10,-19), };
+CONST score_t connected_pawn[7]  = { S(  0,  0), S(  2,  3), S(  5,  4), S(  5,  4), S( 10,  9), S( 29, 37), S( 40, 77), };
+CONST score_t passed_pawn[7]     = { S(  0,  0), S( 50, 38), S( 30, 43), S(-40, 77), S(-26,114), S(199,174), S(428,289), };
+CONST score_t passed_blocked[7]  = { S(  0,  0), S(  2, -1), S(-11,  1), S(-12, -8), S(  4,-20), S(  6,-30), S(-71,-70), };
+CONST score_t passed_file[4]     = { S( -7,  1), S(-23, -3), S(-28,-15), S(-26,-35), };
+CONST score_t distance_us[7]     = { S(  0,  0), S(  5, -6), S( 12, -6), S( 23,-15), S( 15,-17), S(-15,-19), S(-33,-20), };
+CONST score_t distance_them[7]   = { S(  0,  0), S(-12,  1), S(-15,  2), S(-12,  9), S( -4, 18), S( -4, 29), S( 10, 32), };
 
 /* Mostly inspiration from stockfish. */
 score_t evaluate_pawns(const struct position *pos, struct evaluationinfo *ei, int us) {

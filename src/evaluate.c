@@ -28,51 +28,51 @@
 #include "option.h"
 #include "texeltune.h"
 
-CONST score_t king_on_open_file     = S( -8, -4);
-CONST score_t knight_outpost        = S( 33, 13);
-CONST score_t knight_outpost_attack = S( 17, 10);
-CONST score_t bishop_outpost        = S( 32, -4);
-CONST score_t bishop_outpost_attack = S( 15,  4);
-CONST score_t bishop_long_diagonal  = S( 15, 10);
-CONST score_t knight_behind_pawn    = S(  2,  7);
-CONST score_t bishop_behind_pawn    = S(  3, -2);
-CONST score_t defended_knight       = S(  6,  4);
-CONST score_t defended_bishop       = S(  2, 20);
-CONST score_t knight_far_from_king  = S( -7, -2);
-CONST score_t bishop_far_from_king  = S( -5, -1);
-CONST score_t knight_pair           = S( -5, 15);
-CONST score_t bishop_pair           = S( 36, 66);
-CONST score_t rook_pair             = S( 18,-48);
+CONST score_t king_on_open_file     = S( -2, -7);
+CONST score_t knight_outpost        = S( 33, 21);
+CONST score_t knight_outpost_attack = S( 15, 13);
+CONST score_t bishop_outpost        = S( 37,  3);
+CONST score_t bishop_outpost_attack = S( 15,  7);
+CONST score_t bishop_long_diagonal  = S( 13, 12);
+CONST score_t knight_behind_pawn    = S(  4,  5);
+CONST score_t bishop_behind_pawn    = S(  9,  0);
+CONST score_t defended_knight       = S(  3,  0);
+CONST score_t defended_bishop       = S(  1, 20);
+CONST score_t knight_far_from_king  = S( -6, -2);
+CONST score_t bishop_far_from_king  = S( -3, -2);
+CONST score_t knight_pair           = S( -7, -2);
+CONST score_t bishop_pair           = S( 28, 71);
+CONST score_t rook_pair             = S(  6,-37);
 CONST score_t pawn_blocking_bishop  = S( -4, -7);
-CONST score_t rook_open             = S( 40,  0);
-CONST score_t rook_semi             = S( 16,  6);
-CONST score_t rook_closed           = S(  4, -7);
-CONST score_t rook_blocked          = S(-19,-17);
-CONST score_t bad_queen             = S(-21, -6);
-CONST score_t king_attack_pawn      = S( -5, 40);
-CONST score_t king_defend_pawn      = S( -2, 17);
-CONST score_t tempo_bonus           = S( 22, 18);
+CONST score_t rook_open             = S( 39,  6);
+CONST score_t rook_semi             = S( 16,  4);
+CONST score_t rook_closed           = S( -1, -8);
+CONST score_t rook_blocked          = S(-23,-21);
+CONST score_t bad_queen             = S(-20, -6);
+CONST score_t king_attack_pawn      = S(-12, 39);
+CONST score_t king_defend_pawn      = S(  0,  9);
+CONST score_t tempo_bonus           = S( 20, 16);
 
-CONST score_t pawn_threat           = S( 66, 49);
-CONST score_t push_threat           = S( 17,  7);
-CONST score_t minor_threat[7]       = { S(  0,  0), S( -2, 10), S( 17, 36), S( 45, 49), S( 51, 39), S( 41, 58), };
-CONST score_t rook_threat[7]        = { S(  0,  0), S(  7, 31), S( 31, 32), S( 36, 33), S( 16, 13), S( 55, 58), };
+CONST score_t pawn_threat           = S( 56, 46);
+CONST score_t push_threat           = S( 15, 10);
+CONST score_t minor_threat[7]       = { S(  0,  0), S( -3, 10), S( 16, 35), S( 38, 42), S( 40, 36), S( 29, 43), };
+CONST score_t rook_threat[7]      = { S(  0,  0), S( 11, 27), S( 27, 25), S( 27, 29), S(  6, 16), S( 40, 26), };
 
-CONST int weak_squares              = 40;
-CONST int enemy_no_queen            = 261;
+CONST int weak_squares              = 46;
+CONST int enemy_no_queen            = 329;
 CONST int knight_attack             = 46;
-CONST int bishop_attack             = 35;
-CONST int rook_attack               = 36;
-CONST int queen_attack              = 30;
-CONST int discovery                 = 288;
-CONST int checks[12]                = { 0, 0, 0, 0, 165, 192, 81, 198, 164, 347, 111, 215, };
+CONST int bishop_attack             = 40;
+CONST int rook_attack               = 41;
+CONST int queen_attack              = 32;
+CONST int discovery                 = 361;
+CONST int checks[12]                = { 0, 0, 0, 0, 164, 217, 48, 207, 173, 423, 121, 223, };
 
-CONST int phase_max                 = 7808;
-CONST int phase_min                 = 309;
-CONST int phase_knight              = 289;
-CONST int phase_bishop              = 366;
-CONST int phase_rook                = 570;
-CONST int phase_queen               = 1454;
+CONST int phase_max                 = 7676;
+CONST int phase_min                 = 1359;
+CONST int phase_knight              = 358;
+CONST int phase_bishop              = 386;
+CONST int phase_rook                = 494;
+CONST int phase_queen               = 1362;
 
 const int material_value[7] = { 0, 100, 300, 300, 500, 1000, 0 };
 
